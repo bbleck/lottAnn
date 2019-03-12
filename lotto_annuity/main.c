@@ -37,7 +37,7 @@ int main(int argc, const char * argv[]) {
   sum = 0;//reset the sum
   for (i=1; i<=term; i++) {
     sum += first;
-    printf("Year %d = $%.2f Million, Total = $%.2f Million\n", i, first, sum);
+    printf("Year %d = $%.2f Million, Received = $%.2f Million\n", i, first, sum);
     first *= yearlyIncrease;
   }
   
