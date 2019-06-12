@@ -12,12 +12,12 @@
 
 int main(int argc, const char * argv[]) {
   
-  double total = 450.0;//the total jackpot
+  double total = 20.59;//the total jackpot
   double x = total;
   double first = x;//the amount of the first payment
   double sum = 0;//the total amount paid
   double yearlyIncrease = 1.05;//annuities pay 5% more each year
-  double granularity = 0.01;//adjustment for accuracy of sum = total at the end
+  double granularity = 0.0001;//adjustment for accuracy of sum = total at the end
   int i = 0;
   int term = 30;//number of years the annuity pays out over
 
@@ -37,7 +37,7 @@ int main(int argc, const char * argv[]) {
   sum = 0;//reset the sum
   for (i=1; i<=term; i++) {
     sum += first;
-    printf("Year %d = $%.2f Million, Received = $%.2f Million\n", i, first, sum);
+    printf("Year %d = $%.2f Million, Total Received = $%.2f Million\n", i, first, sum);
     first *= yearlyIncrease;
   }
   
